@@ -1,0 +1,15 @@
+<section id="banner" class="bg-{{bgColor}}" ng-controller="communityMemberController" ng-click="block.edit()">
+    <div class="content">
+        <header>
+            <h1 class="text-{{bgTextcolor}}">{{block.data.title}}</h1>
+        </header>
+        <p class="text-{{bgTextcolor}}">{{block.data.description}}</p>
+        <div class="actions">
+            <a href="mailto:{{block.data.email}}" class="button big text-{{bgTextcolor}}">Get in  touch</a>
+        </div>
+    </div>
+    <span class="image object">
+        <img src="https://unavatar.now.sh/github/{{block.data.gitHubProfileImage}}" alt="" />
+        <img src="{{imageUrl}}" alt="" />
+    </span>
+</section>

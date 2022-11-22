@@ -1,0 +1,16 @@
+{
+  "propertyEditors": [
+    {
+      "name": "GitHub Username",
+      "alias": "my.GitHubUsername",
+      "icon": "puppylinux_system_logout",
+      "group": "social media",
+      "isParameterEditor": true,
+      "editor": {
+        "view": "~/App_Plugins/githubusername/editor.html"
+      }
+    }
+  ],
+  "javascript": [],
+  "css": [ "~/App_Plugins/githubusername/editor.css"]
+}

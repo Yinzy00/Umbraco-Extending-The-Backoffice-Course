@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using System.Reflection
+@{
+    var content = (ContentModels.CommunityMemberDetails)Model.Content;
+    var settings = (ContentModels.CommunityMemeberDetailsSettings)Model.Settings;
+    var tColor = settings.TextColor.Label;
+    var bgColor = settings.BackgroundColor.Label;
+}
+<section id="banner" class="bg-@bgColor">
+    <div class="content">
+        <header>
+            <h1 class="text-@tColor">@content.Title</h1>
+        </header>
+        <p class="text-@tColor">@content.Description</p>
+        <div class="actions">
+            <a href="mailto:@content.Email" class="button big text-@tColor">Get in  touch</a>
+        </div>
+    </div>
+    <span class="image object">
+        <img src="https://unavatar.now.sh/github/@content.GithubProfileImage" alt="" />
+        <img src="@content.Image.Url()" alt="" />
+    </span>
+</section>
